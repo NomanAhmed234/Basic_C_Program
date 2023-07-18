@@ -1,13 +1,10 @@
 #include<stdio.h>
-int main ()
-{ 
-float a, b, c,sum; 
-	printf("Enter the first number: ");
-	scanf("%f",&a);
-	printf("Enter the second number: ");
-	scanf("%f",&b);
-	printf("Enter the third number: ");
-	scanf("%f",&c);
-	sum=a+b+c;
-	printf("Sum = %f",sum);	
+int main()
+{
+	
+	int i,j;
+	float c=3.9;
+  printf("In 1  Minute  Calories Burn Are 3.9\n");
+		for(j=10;j<=30;j=j+5)
+		printf("In %d Minutes Calories Burn Are %.1f\n",j,j*c);
 }
