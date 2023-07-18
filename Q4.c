@@ -1,9 +1,19 @@
 #include<stdio.h>
-int main ()
-{ 
-float r,volume,pi=3.142;
-printf("Enter the Radius: ");
-scanf("%f",&r);
-volume=(4*pi*(r*r*r)/3);    // (4/3)=1.333
-printf("volume of sphere is %f",volume);
+int main()
+{
+char a[1000],b;
+int i,at=0;
+printf("Enter Your Email Address\n");
+gets(a);
+for(i=0;i<a[i];i++)
+{
+b=a[i];
+if(b=='@')
+at++;
+}
+if(at==1)
+printf("'@' Is Present");
+else
+printf("'@' Is Not Present");
+return 0;
 }
