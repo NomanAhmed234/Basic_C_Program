@@ -1,14 +1,19 @@
-#include<stdio.h>
-int main()
+/*Take temperature in Fahrenheit as input and convert it into Centigrade i.e. C =
+5*(F-32)/9*/
+#include <stdio.h>
+//function to convert fahrenheit into centigrade
+float convert(float tf)
 {
-char a[1000];
-int i;
-printf("Enter Line In Lowercase:\n");
-gets(a);
-for(i=0;a[i]!=0;i++)
-{
-if(a[i]>='a'&&a[i]<='z')
-a[i]=a[i]-32;
+	float temperature_centigrade;
+	temperature_centigrade = 5 * (tf - 32) / 9;
+	return temperature_centigrade;
 }
-puts(a);
+
+int main(void) {
+  float temperature_fahrenheit;
+  printf("Enter temperature in Fahrenheit: ");
+  scanf("%f", &temperature_fahrenheit);
+  printf("Temperature in Centigrade: %.2fC\n", convert(temperature_fahrenheit));
+  return 0;
 }
+

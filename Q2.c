@@ -1,10 +1,30 @@
-#include<stdio.h>
+/*For a student of CSC103, take his Quiz #1 marks (out of 15) as input and
+convert it into percentage marks.*/
+#include <stdio.h>
+
+//function to calculate percentage
+float percent(float quiz_marks)
+{
+    float percentage_marks;
+    percentage_marks = quiz_marks / 15 * 100;
+    return percentage_marks;
+}
+
 int main()
 {
-	
-	int i,j;
-	float c=3.9;
-  printf("In 1  Minute  Calories Burn Are 3.9\n");
-		for(j=10;j<=30;j=j+5)
-		printf("In %d Minutes Calories Burn Are %.1f\n",j,j*c);
+    float quiz_marks;
+    c:
+    printf("Enter Quiz #1 marks (out of 15): ");
+    scanf("%f", &quiz_marks);
+    if(quiz_marks>=0 && quiz_marks<=15)
+    {
+        printf("Percentage marks: %.2f%%\n", percent(quiz_marks));
+    }
+    else
+    {
+        printf("Error!\n");
+        goto c;
+    }
+    return 0;
 }
+

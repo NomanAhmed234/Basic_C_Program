@@ -1,19 +1,23 @@
-#include<stdio.h>
-int main()
+/*Input current and resistance from user and write a function to calculate voltage.
+V=IR .*/
+
+#include <stdio.h>
+//Calculate Voltage using Ohm's Law
+float volt(float I,float R)
 {
-char a[1000],b;
-int i,at=0;
-printf("Enter Your Email Address\n");
-gets(a);
-for(i=0;i<a[i];i++)
+    float V;
+    V=I*R;
+    return V;
+}
+
+int main ()
 {
-b=a[i];
-if(b=='@')
-at++;
+    float I, R, V;
+    printf("Enter the value of Current(I) = ");
+    scanf("%f",&I);
+    printf("\nEnter the value of Resistance(R) = ");
+    scanf("%f",&R);
+    printf("\nVoltage = %.2fV", volt(I,R));
+    return 0;
 }
-if(at==1)
-printf("'@' Is Present");
-else
-printf("'@' Is Not Present");
-return 0;
-}
+
